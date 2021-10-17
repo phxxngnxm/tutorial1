@@ -1,0 +1,82 @@
+body {
+    font-family: 'Lora', sans-serif !important;
+    color: white;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./Materials/header.jpg');
+    background-repeat: no-repeat;
+    width: 1280px;
+    height: 750px;
+    background-size: cover;
+    object-fit: cover;
+    background-position: bottom;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.nav p {
+    padding: 20px;
+    margin: auto;
+    float: left;
+    font-size: 40px;
+}
+
+.nav a {
+    padding: 20px;
+    float: right;
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+.nav a:hover {
+    color: whitesmoke;
+    transition: 0.3s;
+}
+.takeactions {
+    border: white;
+    border-style: solid;
+    border-radius: 100px;
+    border-width: 1px;
+    padding: 10px 15px !important;
+    margin-top: 24px !important;
+}
+
+.takeactions:hover {
+    background-color: white;
+    color: black !important;
+    transition: 0.3s;
+}
+
+.header {
+    left: 0;
+    line-height: 0pt;
+    position: absolute;
+    text-align: center;
+    top: 33%;
+    width: 100%;
+}
+
+#swy {
+    font-size: 50px;
+}
+
+#learnmore {
+    border: rgb(54, 179, 168);
+    border-style: solid;
+    background: rgb(54, 179, 168);
+    border-radius: 100px;
+    border-width: 0px;
+    padding: 15px !important;
+}
+
+#learnmore:hover {
+    cursor: pointer;
+    background: rgba(54, 179, 168, 0.6);
+    transition: 0.3s;
+}
+
+
+
