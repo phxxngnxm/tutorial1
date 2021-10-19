@@ -1,0 +1,115 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 0.2pt;
+    word-spacing: 1pt;
+    font-family: 'Arvo';
+}
+  
+/* Layout */
+  
+section {
+    float: left;
+    width: 50%;
+    text-indent: 20px;
+}
+  
+aside {
+    float: left;
+    width: 30%;
+}
+  
+nav { 
+    float: left;
+    width: 20%;
+    font-size: 15pt;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    border-color: #a66;
+    border-style: solid;
+    border-width: 1.3pt;
+    width: 100%;
+    padding-top: -10px;
+    line-height: 40pt;
+}
+  
+footer {
+    clear: both;
+}
+  
+header, section, aside, nav, footer {
+    padding: 20px;
+}
+  
+/* header and footer */
+  
+header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+  
+/* WRITE YOUR CODE BELOW HERE */
+
+@font-face {
+    font-family: 'Arvo';
+    font: 'Arvo-Regular';
+    src: url(fonts/Arvo-Regular.tff);
+    font-weight: normal;
+}
+
+h1, h2 {
+    letter-spacing: 0.3pt;
+    word-spacing: 1pt;
+    text-indent: 0%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+h2 {
+    font-size: 20px;
+}
+ul, ol {
+    text-indent: 0%;
+}
+
+a[href^="http"] {
+    padding-right: 18px;
+    background: url(images/external-link-52.png) no-repeat center right;
+    background-size: 12px 12px;
+}
+a, a:visited, a:focus, a:hover {
+    color: #a66;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: navy;
+}
+
