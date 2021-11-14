@@ -7,67 +7,75 @@
     <title>Tank</title>
 </head>
 <body>
-    <canvas id="game" width="800" height="600" style="border: 3px solid #000000">
-        <img id="tank"
-            src="image/tank.png"
-            style="position: relative; top: 0px; left: 0px;"
-            width="19"
-            height="19">
-    </canvas>
-    <br>
-    <button id="upBtn">Go up</button>
-    <button id="downBtn">Go down</button>
-    <button id="leftBtn">Go left</button>
-    <button id="rightBtn">Go right</button>
+    <div style="width: 190px; height: 190px; border: 1px solid black;" id="battleFiled">
+        <div style="top: 19px; left: 38px; width: 19px; height: 19px; background-image: url('image/tank.png'); background-size: 100% 100%; position: relative;" id="tank">
+        </div>
+    </div>
+    <table>
+        <tr>
+        <td></td>
+        <td>
+            <button onclick="moveTankUp()">⬆</button>
+        </td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>
+            <button onclick="moveTankLeft()">⬅</button></td>
+        <td></td>
+        <td>
+            <button onclick="moveTankRight()">➡</button></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>
+            <button onclick="moveTankDown()">⬇</button></td>
+        <td></td>
+        </tr>
+    </table>
         
     <script>
+        let battleField = document.getElementById('battleField').getContext("2d");
         let tank = document.getElementById('tank');
         let tankYPosition = 20;
         let tankXPosition = 20;
-        let upBtn = document.getElementById('upBtn');
-        let downBtn = document.getElementById('downBtn');
-        let leftBtn = document.getElementById('leftBtn');
-        let rightBtn = document.getElementById('rightBtn');
 
-        function moveTankUp () {
-            tank.clearRect(20, tankYPosition, 150, 100);
+
+        function moveTankUp() {
+            battleField.clearRect('tank');
                 if (tankYPosition > 0) {
                 tankYPosition--;
             }
         }
 
-        setInterval (moveTankUp, 10);
+        setInterval (moveTankUp(), 10);
 
-        function moveTankDown () {
+        function moveTankDown() {
             tank.clearRect(20, tankYPosition, 150, 100);
             if (tankYPosition < 600) {
                 tankYPosition++;
             }
         }
 
-        setInterval (moveTankDown, 10);
+        setInterval (moveTankDown(), 10);
 
-        function moveTankLeft () {
+        function moveTankLeft() {
             tank.clearRect(20, tankXPosition, 150, 100);
             if (tankXPosition > 0) {
                 tankXPosition--;
             }
         }
 
-        setInterval (moveTankLeft, 10);
+        setInterval (moveTankLeft(), 10);
 
-        function moveTankRight () {
+        function moveTankRight() {
             tank.clearRect(20, tankXPosition, 150, 100);
             if (tankXPosition < 600) {
                 tankXPosition++;
             }
         }
 
-        setInterval (moveTankDown, 10);
-
-        
-        
-
+        setInterval (moveTankDown(), 10);
         
 
 
