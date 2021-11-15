@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="rad" id="rad" placeholder="Enter the radius">
+    <button onclick="diameterCal()">Diameter</button>
+    <button onclick="perimeterCal()">Perimeter</button>
+    <button onclick="areaCal()">Area</button>
+    <p id="result"></p>
+    <script>
+        let radInput = document.getElementById('rad');
+        let result = document.getElementById('result');
+
+        function diameterCal(){
+            let rad = parseFloat(radInput.value);
+            result.innerText = 'Diameter of circle: ' + 2 * rad; 
+        }
+
+        function perimeterCal(){
+            let rad = parseFloat(radInput.value);
+            result.innerText = 'Perimeter of circle: ' + 2 * Math.PI * rad; 
+        }
+
+        function areaCal(){
+            let rad = parseFloat(radInput.value);
+            result.innerText = 'Area of circle: ' + Math.pow(rad, 2) * Math.PI; 
+        }
+    </script>
+</body>
+</html>

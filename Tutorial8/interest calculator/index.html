@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest counter</title>
+</head>
+<body>
+    <input type="number" name="loan" id="loan" placeholder="Money(million vnd)">
+    <input type="number" name="interest" id="interest" placeholder="The interest (%/year)">
+    <input type="number" name="year" id="year" placeholder="The years">
+    <button onclick="display()">Result</button>
+    <p id="result"></p>
+    <script>
+        let loanInput = document.getElementById('loan');
+        let interestInput = document.getElementById('interest');
+        let yearInput = document.getElementById('year');
+        let result = document.getElementById('result');
+
+        function display(){
+            let loan = parseFloat(loanInput.value);
+            let interest = parseFloat(interestInput.value);
+            let year = parseFloat(yearInput.value);
+            result.innerText = 'You have to pay back: ' + (loan + year * (loan * interest / 100)) + ' (million vnd)';
+        }
+    </script>
+</body>
+</html>

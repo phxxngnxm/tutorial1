@@ -36,5 +36,48 @@
             </tr>
         </table>
         
+        <script>
+            let battleField = document.getElementById('battleField').getContext("2d");
+        let tank = document.getElementById('tank');
+        let tankYPosition = 20;
+        let tankXPosition = 20;
+
+
+        function moveTankUp() {
+            battleField.clearRect('tank');
+                if (tankYPosition > 0) {
+                tankYPosition--;
+            }
+        }
+
+        setInterval (moveTankUp(), 10);
+
+        function moveTankDown() {
+            tank.clearRect(20, tankYPosition, 150, 100);
+            if (tankYPosition < 600) {
+                tankYPosition++;
+            }
+        }
+
+        setInterval (moveTankDown(), 10);
+
+        function moveTankLeft() {
+            tank.clearRect(20, tankXPosition, 150, 100);
+            if (tankXPosition > 0) {
+                tankXPosition--;
+            }
+        }
+
+        setInterval (moveTankLeft(), 10);
+
+        function moveTankRight() {
+            tank.clearRect(20, tankXPosition, 150, 100);
+            if (tankXPosition < 600) {
+                tankXPosition++;
+            }
+        }
+
+        setInterval (moveTankDown(), 10);
+        </script>
     </body>
     </html>
